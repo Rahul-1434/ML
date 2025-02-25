@@ -34,7 +34,7 @@ xtrain_dtm = count_vect.fit_transform(xtrain)
 xtest_dtm = count_vect.transform(xtest)
 
 print('\nThe words or Tokens in the text documents:\n')
-print(count_vect.get_feature_names_out())
+print(count_vect.get_feature_names())
 
 clf = MultinomialNB().fit(xtrain_dtm, ytrain)
 predicted = clf.predict(xtest_dtm)
